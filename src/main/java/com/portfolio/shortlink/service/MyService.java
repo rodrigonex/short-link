@@ -39,7 +39,7 @@ public class MyService {
             return new ResponseEntity<>("Código não encontrado", HttpStatus.BAD_REQUEST);
         } else {
             ShortLink shortLink = repository.findByCod(id);
-            return new ResponseEntity<String>(shortLink.getUrl(), HttpStatus.OK);
+            return new ResponseEntity<>(shortLink, HttpStatus.OK);
         }
     }
 
